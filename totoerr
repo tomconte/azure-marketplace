@@ -1,0 +1,34 @@
+{"code":"DeploymentFailed","message":"At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/DeployOperations for usage details.","details":[{"code":"VMExtensionProvisioningError","message":"VM has reported a failure when processing extension 'script'. Error message: \"Enable failed: failed to execute command: command terminated with exit status=10
+[stdout]
+[02122020-09:59:53] [apply_security_settings] could not update the built-in elastic user
+
+[stderr]
+ing
+sent invalidate(group) request, exiting
+sent invalidate(passwd) request, exiting
+sent invalidate(group) request, exiting
+sent invalidate(passwd) request, exiting
+sent invalidate(group) request, exiting
+sent invalidate(passwd) request, exiting
+sent invalidate(group) request, exiting
+Synchronizing state of elasticsearch.service with SysV init with /lib/systemd/systemd-sysv-install...
+Executing /lib/systemd/systemd-sysv-install enable elasticsearch
+Created symlink from /etc/systemd/system/multi-user.target.wants/elasticsearch.service to /usr/lib/systemd/system/elasticsearch.service.
+run-parts: executing /usr/share/netfilter-persistent/plugins.d/15-ip4tables save
+run-parts: executing /usr/share/netfilter-persistent/plugins.d/25-ip6tables save
+ % Total % Received % Xferd Average Speed Time Time Time Current
+ Dload Upload Total Spent Left Speed
+\r 0 0 0 0 0 0 0 0 --:--:-- --:--:-- --:--:-- 0\r100 293 100 265 100 28 1102 116 --:--:-- --:--:-- --:--:-- 1104
+HTTP 503
+ % Total % Received % Xferd Average Speed Time Time Time Current
+ Dload Upload Total Spent Left Speed
+\r 0 0 0 0 0 0 0 0 --:--:-- --:--:-- --:--:-- 0\r100 543 100 543 0 0 4963 0 --:--:-- --:--:-- --:--:-- 4981
+elasticsearch-install.sh: line 543: [[: {\"error\":{\"root_cause\":[{\"type\":\"security_exception\",\"reason\":\"unable to authenticate user [elastic] for REST request [/_cluster/health/.security?wait_for_status=green&timeout=15m&filter_path=status]\",\"header\":{\"WWW-Authenticate\":\"Basic realm=\\\"security\\\" charset=\\\"UTF-8\\\"\"}}],\"type\":\"security_exception\",\"reason\":\"unable to authenticate user [elastic] for REST request [/_cluster/health/.security?wait_for_status=green&timeout=15m&filter_path=status]\",\"header\":{\"WWW-Authenticate\":\"Basic realm=\\\"security\\\" charset=\\\"UTF-8\\\"\"}},\"status\":401} 401: syntax error: operand expected (error token is \"{\"error\":{\"root_cause\":[{\"type\":\"security_exception\",\"reason\":\"unable to authenticate user [elastic] for REST request [/_cluster/health/.security?wait_for_status=green&timeout=15m&filter_path=status]\",\"header\":{\"WWW-Authenticate\":\"Basic realm=\\\"security\\\" charset=\\\"UTF-8\\\"\"}}],\"type\":\"security_exception\",\"reason\":\"unable to authenticate user [elastic] for REST request [/_cluster/health/.security?wait_for_status=green&timeout=15m&filter_path=status]\",\"header\":{\"WWW-Authenticate\":\"Basic realm=\\\"security\\\" charset=\\\"UTF-8\\\"\"}},\"status\":401} 401\")
+elasticsearch-install.sh: line 555: [[: {\"error\":{\"root_cause\":[{\"type\":\"security_exception\",\"reason\":\"unable to authenticate user [elastic] for REST request [/_cluster/health/.security?wait_for_status=green&timeout=15m&filter_path=status]\",\"header\":{\"WWW-Authenticate\":\"Basic realm=\\\"security\\\" charset=\\\"UTF-8\\\"\"}}],\"type\":\"security_exception\",\"reason\":\"unable to authenticate user [elastic] for REST request [/_cluster/health/.security?wait_for_status=green&timeout=15m&filter_path=status]\",\"header\":{\"WWW-Authenticate\":\"Basic realm=\\\"security\\\" charset=\\\"UTF-8\\\"\"}},\"status\":401} 401: syntax error: operand expected (error token is \"{\"error\":{\"root_cause\":[{\"type\":\"security_exception\",\"reason\":\"unable to authenticate user [elastic] for REST request [/_cluster/health/.security?wait_for_status=green&timeout=15m&filter_path=status]\",\"header\":{\"WWW-Authenticate\":\"Basic realm=\\\"security\\\" charset=\\\"UTF-8\\\"\"}}],\"type\":\"security_exception\",\"reason\":\"unable to authenticate user [elastic] for REST request [/_cluster/health/.security?wait_for_status=green&timeout=15m&filter_path=status]\",\"header\":{\"WWW-Authenticate\":\"Basic realm=\\\"security\\\" charset=\\\"UTF-8\\\"\"}},\"status\":401} 401\")
+ % Total % Received % Xferd Average Speed Time Time Time Current
+ Dload Upload Total Spent Left Speed
+\r 0 0 0 0 0 0 0 0 --:--:-- --:--:-- --:--:-- 0\r100 387 100 387 0 0 3603 0 --:--:-- --:--:-- --:--:-- 3616
+HTTP 401
+\"\r
+\r
+More information on troubleshooting is available at https://aka.ms/VMExtensionCSELinuxTroubleshoot "}]}
