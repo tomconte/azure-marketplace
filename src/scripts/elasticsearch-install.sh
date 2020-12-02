@@ -534,6 +534,9 @@ curl_ignore_409 () {
 # and checks that the status is green
 wait_for_green_security_index() 
 {
+  retries=0
+  until [ "$retries" -ge 10 ]
+  do
     exec 17>&1
     local response=$(curl -XGET -u "elastic:$USER_ADMIN_PWD" -H 'Content-Type: application/json' --write-out '\n%{http_code}\n' \
       "$PROTOCOL://localhost:9200/_cluster/health/.security?wait_for_status=green&timeout=15m&filter_path=status" $CURL_SWITCH | tee /dev/fd/17) 
@@ -554,8 +557,11 @@ wait_for_green_security_index()
     fi
     if [[ $http_code -ge 400 && $http_code -lt 600 ]]; then
         echo "HTTP $http_code" >&2
-        return 127
+        retries=$((retries+1))
+        sleep 30
     fi
+  done
+  return 127
 }
 
 escape_pwd() 
